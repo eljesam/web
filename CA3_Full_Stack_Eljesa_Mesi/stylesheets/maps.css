@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+
+:root {
+    --dark-green: #112a34;
+    --green-color: #004047;
+    --white-color: #fff;
+}
+
+::selection {
+    background: var(--green-color);
+    color: var(--white-color);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 90%;
+}
+
+section {
+    padding: 0 8rem;
+    width: 100%;
+}
+section .em_homePage{
+    padding: .5rem;
+    width: 100%;
+    height: 100vh;
+}
+.em_homePage .em_homePageContainer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1));
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.em_homePage .em_homePageContainer nav{
+    width: 100%;
+    height: 65px;
+    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    backdrop-filter: blur(1px);
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 10;
+    position: relative;
+}
+.em_homePage .em_homePageContainer nav .em_logo{
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+.em_homePage .em_homePageContainer nav .em_logo .em_logoBar{
+    font-size: 1.35rem;
+    color: var(--dark-green);
+    cursor: pointer;
+    display: none;
+}
+.em_homePage .em_homePageContainer nav .em_logo .em_logoBar:hover{
+    color: var(--green-color);
+}
+.em_homePage .em_homePageContainer nav .em_logo h3{
+    color: var(--dark-green);
+    font-weight: 400;
+}
+.em_homePage .em_homePageContainer nav .em_menu .em_close{
+   display:none;
+}
+.em_homePage .em_homePageContainer nav .em_menu ul{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+.em_homePage .em_homePageContainer nav .em_menu ul li a{
+    color: var(--dark-green);
+    font-weight: 400;
+    cursor: pointer;
+}
+.em_homePage .em_homePageContainer nav .em_menu ul li a:hover{
+    color: rgb(255 255 255/70%);
+}
+.em_homePage .em_homePageContainer nav .em_translateCurrency{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+.em_homePage .em_homePageContainer nav .em_translateCurrency a{
+    color: var(--dark-green);
+    font-weight: 400;
+    cursor: pointer;
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+}
+.em_homePage .em_homePageContainer nav .em_translateCurrency a:hover{
+    color: rgb(255 255 255/70%);
+}
+
+
+ /* style map*/
+ .em_mapsSection {
+    width: 100%;
+    height: 100vh;
+    padding: auto;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#controlPanel, #map {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#controlPanel {
+    width: 30%;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    width: 70%;
+    height: 800px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+#transportModes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#transportModes button {
+    background-color: #112a34; 
+    border: none;
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+#transportModes button:hover {
+    background-color: #004047; 
+}
+.selectLocationLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#start, #end {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#directions {
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#directions summary {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#placeTypes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#placeTypes button {
+    background-color:#112a34;
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+#placeTypes button:hover {
+    background-color:#004047; /* Darker green */
+}
+label[for="filterInput"] {
+    /* Add your styles for the label here */
+    font-size: 16px;
+    color: #333;
+}
+
+#filterInput {
+    /* Add your styles for the input field here */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[onclick='filterData()'] {
+    /* Add your styles for the button here */
+    padding: 10px 20px;
+    background-color: #112a34;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[onclick='filterData()']:hover {
+    /* Add your styles for the button hover state here */
+    background-color: #004047 ;
+}

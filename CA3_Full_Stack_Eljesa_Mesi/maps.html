@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course notes example code</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="Content-Language" content="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
+        <link rel = stylesheet href = "stylesheets\maps.css">
+        <script src="scripts/mapsJS.js"></script>
+
+    </head>
+
+    <body>
+        <section class="em_homePage">
+            <div class="em_homePageContainer">
+                <nav>
+                    <!--Open Close responsive menu referenced from:https://www.youtube.com/watch?v=GuuOVv0C02I&t=12s-->
+                    <div class="em_logo">
+                        <div class="em_logoBar">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <h3>Olympics 2024</h3>
+                    </div>
+                    <div class="em_menu">
+                        <div class="em_close">
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <!--*****************************-->
+                        <ul>
+                            <li><a href="index.html">home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="https://wwws.airfrance.ie/">flights</a></li>
+                            <li><a href="maps.html">destinatons</a></li>
+                        </ul>
+                    </div>
+                    <div class="em_translateCurrency">
+                        <a href="#"><i class="fa fa-eur"></i></a>
+                        <a href="#"><i class="fa fa-globe"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section class = "em_mapsSection">
+        <div id=controlPanel>
+            <span class=selectLocationLabel>Start:</span>
+            <input type=text id=start value="Your location">
+
+            <br>
+            <span class=selectLocationLabel>End:</span>
+            <input type=text id=end value="Destination">
+        
+
+        <div id=transportModes>
+            <button onclick="calculateRoute('DRIVING')"><i class="material-icons">directions_car</i></button>
+            <button onclick="calculateRoute('TRANSIT')"><i class="material-icons">directions_bus</i></button>
+            <button onclick="calculateRoute('BICYCLING')"><i class="material-icons">directions_bike</i></button>
+            <button onclick="calculateRoute('WALKING')"><i class="material-icons">directions_walk</i></button>
+        </div>
+        <br>
+       
+
+        <h1 id=transport-mode>Driving</h1>
+        <details id=directions><summary>Directions</summary></details>
+
+       <!-- <div id="placeTypes">
+            <button onclick="searchPlaces('restaurant')">Restaurants</button>
+            <button onclick="searchPlaces('cafe')">Cafes</button>
+            <button onclick="searchPlaces('lodging')">Hotels</button>
+        </div>-->
+            <label for="filterInput">
+                <input type="text" id="filterInput" placeholder="Filter...">
+            </label>
+            <button onclick='filterData()'>Filter</button>
+        </div>
+
+        <div id=map></div> 
+        </section>      
+
+        <!-- Google Maps -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsjs3MCS5NUQCjPd0Jep9sNxdKrutMOz4&loading=async&callback=loadMap&libraries=places,marker" async></script>
+
+    </body>
+</html>
